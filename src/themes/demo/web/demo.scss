@@ -1,0 +1,84 @@
+
+// Note that the order in the aggregating file is important
+//
+// 1. custom variables file: Due to the way sass default works, 
+//    the custom variable file must be imported before the platform theme 
+//    aggregating file (where the platform variable file will be imported).
+// 2. platform theme aggregating file
+
+//import custom variable overrides
+@import "demo.web.settings";
+
+// import alta aggregating file
+@import "../../../../node_modules/@oracle/oraclejet/dist/scss/alta/oj-alta";
+
+
+.oj-web-applayout-footer {
+  background-color: #222324;
+  border-top-color: #222324;
+}
+
+.demo-banner {
+  padding: 36px 0 36px 6px;
+  -webkit-transition: padding 0.4s ease-in-out;
+  transition: padding 0.4s ease-in-out;
+  margin-bottom: 20px;
+}
+.demo-banner h1 {
+  font-size: 46px;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  line-height: 40px;
+  padding-left: 20px;
+  opacity: 0.8;
+  font-weight: lighter;
+  font-family: "SF UI Display", "Helvetica Neue", "Roboto", "Segoe UI", Arial,
+    sans-serif;
+  -webkit-transition: height 0.4s ease-in-out, width 0.4s ease-in-out,
+    font-size 0.4s ease-in-out;
+  transition: height 0.4s ease-in-out, width 0.4s ease-in-out,
+    font-size 0.4s ease-in-out;
+}
+
+.demo-banner-alt1 {
+  background-color: $dvtCategory1Color;
+}
+.demo-banner-alt2 {
+  background-color: $dvtCategory2Color;
+}
+.demo-banner-alt3 {
+  background-color: $dvtCategory3Color;
+}
+.demo-banner-alt4 {
+  background-color: $dvtCategory4Color;
+}
+.demo-banner-alt5 {
+  background-color: $dvtCategory5Color;
+}
+.demo-banner-alt6 {
+  background-color: $dvtCategory6Color;
+}
+.demo-banner-alt7 {
+  background-color: $dvtCategory7Color;
+}
+
+
+.demo-modal {
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.demo-modal-content {
+  color: #fefefe;
+  margin: 25% 50%; 
+  width: fit-content;
+  text-align: center;
+}
